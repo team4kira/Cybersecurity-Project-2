@@ -35,3 +35,13 @@ By: Kevin D
 | Images |  |
 | Affected Hosts | 192.168.14.35/Memory-Planner.php & 192.168.14.35/Welcome.php |
 | Remediation | *	Encrypt Sensitive Information. (T1659) *	Restrict Web-Based Content. (T1659) *	Input Validation. (Stone, Verizon) *	Data Sanitization. (Stone, Verizon) *	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+
+| Vulnerability 2 | Findings |
+| --- | --- |
+| Title  | XSS Stored |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | Medium |
+| Description | In LOM’s assessment of the ‘comments.php’ pages, it was found that a XSS stored injection could be created. The lack of data sanitization and input validation in the web applications allowed LOM to send malicious XSS stored code onto this web page. Upon refreshment, the code was still within the page source, leaving a vulnerability that can affect any future visitors to the site. |
+| Images |  |
+| Affected Hosts | 192.168.14.35/comments.php |
+| Remediation | •	Encrypt Sensitive Information (T1659) •	Restrict Web-Based Content (T1659) •	Input Validation. (Stone, Verizon) •	Data Sanitization. (Stone, Verizon) •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
