@@ -45,3 +45,13 @@ By: Kevin D
 | Images |  |
 | Affected Hosts | 192.168.14.35/comments.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) •	Restrict Web-Based Content (T1659) •	Input Validation. (Stone, Verizon) •	Data Sanitization. (Stone, Verizon) •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+
+| Vulnerability 3 | Findings |
+| --- | --- |
+| Title  | Local File Injection |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | High |
+| Description | A basic PHP script file was uploaded by LOM. This revealed that the web page was configured to accept various file types, not just image files. Some security measures were in place, as it looked for image keywords like the file type ‘.jpg.’ However, if you added just ‘.jpg’ within the file description, it allowed a malicious payload to be uploaded, in this case, a .php file. |
+| Images |  |
+| Affected Hosts | 192.168.13.45/Memory-Planner.php |
+| Remediation | •	Remove file inclusion input if possible. •	Create a whitelist of files that may be included on the web page. (OWASP, WSTG – v4.1) |
