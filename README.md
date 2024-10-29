@@ -55,3 +55,13 @@ By: Kevin D
 | Images |  |
 | Affected Hosts | 192.168.13.45/Memory-Planner.php |
 | Remediation | •	Remove file inclusion input if possible. •	Create a whitelist of files that may be included on the web page. (OWASP, WSTG – v4.1) |
+
+| Vulnerability 4 | Findings |
+| --- | --- |
+| Title  | SQL Injection |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | Critical |
+| Description | In the evaluation of the Login.php webpage, it was found that SQL injection attacks were permissible. The following injection was utilized: ‘ or 1=1#. This resulted in the retrieval of flags and additional data that could be utilized for further exploitations. |
+| Images |  |
+| Affected Hosts | 192.168.13.45/Login.php |
+| Remediation | •	Encrypt Sensitive Information (T1659) •	Restrict Web-Based Content (T1659) •	Input Validation. (Stone, Verizon) •	Utilization of Prepared Statements. (OWASP, SQL Injection Prevention Cheat Sheet) |
