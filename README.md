@@ -65,3 +65,55 @@ By: Kevin D
 | Images |  |
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Utilization of Prepared Statements. (OWASP, SQL Injection Prevention Cheat Sheet) |
+
+
+Work Citation: 
+
+Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
+
+Bu TechWeb. (2024) Securing FTP Servers. BU Tech Web. https://www.bu.edu/tech/about/security-resources/bestpractice/ftp/ 
+
+Crosser, A. (2023) Understanding the Impact of the new Apache Struts File Upload Vulnerability. Praetorian. https://www.praetorian.com/blog/cve-2023-50164-apache-struts-file-upload-vulnerability/ 
+
+Einoryte, A. (2023) What is Mimikatz? What it can do, and how to protect yourself. NordVPN. NordVPN Link. 
+
+Joyce, K. (2021) What is DCSync Attack? Netwrix. https://blog.netwrix.com/2021/11/30/what-is-dcsync-an-introduction/ 
+
+Microsoft. (2024) Windows Management Instrumentation. Microsoft. https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page 
+
+Mitre | Attack: 
+-	T1003.006 (2021) (https://attack.mitre.org/techniques/T1003/006/)
+-	T1047 (2024) (https://attack.mitre.org/techniques/T1047/)
+-	T1110.003 (2024) (https://attack.mitre.org/techniques/T1110/003/)
+-	T1659 (2023) (https://attack.mitre.org/techniques/T1659/)
+
+Moradov, O. (2022) PHP Code Injection: Examples and 4 Prevention Tips. Bight. https://brightsec.com/blog/code-injection-php/ 
+
+Nist. (2019) CVE-2019-14287 Detail. Nist. https://nvd.nist.gov/vuln/detail/CVE-2019-14287 
+
+Nist. (2024) CVE-2023-41080 Detail. Nist. https://nvd.nist.gov/vuln/detail/CVE-2023-41080 
+
+OWASP. (2024) SQL Injection Prevention Cheat Sheet. OWASP. https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html 
+
+OWASP. (2024) WSTF – v4.1 Testing for Local File Inclusion. OWASP. OWASP Link. 
+
+Rapid7. (2018) Apache mod_cgi Bash Environment Vairable Code Injection (Shellshock). Rapid 7. https://www.rapid7.com/db/modules/exploit/multi/http/apache_mod_cgi_bash_env_exec/ 
+
+Rapid7. (2018) Apache Struts Jakarta Multipart Parser OGNL Injection. Rapid 7. https://www.rapid7.com/db/modules/exploit/multi/http/struts2_content_type_ognl/ 
+
+Rapid7. (2019) Drupal RESTful Web Services unserialize() RCE. Rapid 7. https://www.rapid7.com/db/modules/exploit/unix/webapp/drupal_restws_unserialize/ 
+
+Rapid7. (2018) Seattle Lab Mail 5.5 POP3 Overflow. Rapid 7. https://www.rapid7.com/db/modules/exploit/windows/pop3/seattlelab_pass/ 
+
+Rapid7. (2018) Tomcat RCE via JSP Upload Bypass. Rapid7. https://www.rapid7.com/db/modules/exploit/multi/http/tomcat_jsp_upload_bypass/ 
+
+Rapid7. (2018) Windows Management Instrumentation (WMI) Remote Command Execution. Rapid 7. https://www.rapid7.com/db/modules/exploit/windows/local/wmi/ 
+
+Red Hat. (2014) Mitigating the Shellshock Vulnerability (CVE-2014-6721 and CVE-2014-7169). Red Hat. https://access.redhat.com/articles/1212303 
+
+Rhett. (2019) CVE-2019-14287 is Out, But a Workaround’s Available. VulCan. https://vulcan.io/blog/cve-2019-14287-is-out-but-a-workarounds-available/ 
+
+Stone, M. (2024) How to Mitigate Cross-Site Scripting. Verizon. https://www.verizon.com/business/resources/articles/s/how-to-mitigate-cross-site-scripting/ 
+
+The Hacker Tools. (2024) Cache. The Hacker Tool. https://tools.thehacker.recipes/mimikatz/modules/lsadump/cache 
+
