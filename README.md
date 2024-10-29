@@ -34,7 +34,8 @@ By: Kevin D
 | Description | In LOM’s assessment, the ‘Welcome.php’ and the ‘Memory-Planner.php’ pages were evaluated. Utilizing an XSS reflected injection, flags within the web applications were uncovered. The lack of data sanitization and input validation in the web applications allowed LOM to send a malicious XSS reflected code on these two web pages |
 | Images |  |
 | Affected Hosts | 192.168.14.35/Memory-Planner.php & 192.168.14.35/Welcome.php |
-| Remediation | *	Encrypt Sensitive Information. (T1659) *	Restrict Web-Based Content. (T1659) *	Input Validation. (Stone, Verizon) *	Data Sanitization. (Stone, Verizon) *	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+| Remediation | •	Encrypt Sensitive Information. (T1659)
+•	Restrict Web-Based Content. (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
 | Vulnerability 2 | Findings |
 | --- | --- |
@@ -44,7 +45,7 @@ By: Kevin D
 | Description | In LOM’s assessment of the ‘comments.php’ pages, it was found that a XSS stored injection could be created. The lack of data sanitization and input validation in the web applications allowed LOM to send malicious XSS stored code onto this web page. Upon refreshment, the code was still within the page source, leaving a vulnerability that can affect any future visitors to the site. |
 | Images |  |
 | Affected Hosts | 192.168.14.35/comments.php |
-| Remediation | •	Encrypt Sensitive Information (T1659) •	Restrict Web-Based Content (T1659) •	Input Validation. (Stone, Verizon) •	Data Sanitization. (Stone, Verizon) •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+| Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
 | Vulnerability 3 | Findings |
 | --- | --- |
@@ -54,7 +55,7 @@ By: Kevin D
 | Description | A basic PHP script file was uploaded by LOM. This revealed that the web page was configured to accept various file types, not just image files. Some security measures were in place, as it looked for image keywords like the file type ‘.jpg.’ However, if you added just ‘.jpg’ within the file description, it allowed a malicious payload to be uploaded, in this case, a .php file. |
 | Images |  |
 | Affected Hosts | 192.168.13.45/Memory-Planner.php |
-| Remediation | •	Remove file inclusion input if possible. •	Create a whitelist of files that may be included on the web page. (OWASP, WSTG – v4.1) |
+| Remediation | •	Remove file inclusion input if possible <br> •	Create a whitelist of files that may be included on the web page. (OWASP, WSTG – v4.1) |
 
 | Vulnerability 4 | Findings |
 | --- | --- |
