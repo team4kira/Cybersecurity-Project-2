@@ -66,6 +66,15 @@ By: Kevin D
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Utilization of Prepared Statements. (OWASP, SQL Injection Prevention Cheat Sheet) |
 
+| Vulnerability 5 | Findings |
+| --- | --- |
+| Title  | Weak Password on Web Application |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | Critical |
+| Description | The host 192.168.13.45/Login.php contains a hidden username and password that can be identified by inspecting the web page's source code or by selecting the field after 'Login' and 'Password.' The password itself is also not secure, as both the username and password relate to the film Total Recall, making it easily guessable, even if not plainly visible. |
+| Images |  |
+| Affected Hosts | 192.168.13.45/Login.php |
+| Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset compromised passwords and make sure it is not affiliated with the username. <br> |
 
 Work Citation: 
 
