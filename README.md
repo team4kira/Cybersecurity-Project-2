@@ -76,6 +76,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset compromised passwords and make sure it is not affiliated with the username. <br> |
 
+| Vulnerability 6 | Findings |
+| --- | --- |
+| Title  | Command Injection |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | Medium |
+| Description | In the evaluation of the networking.php page, command injection vulnerabilities were discovered, allowing access to various directories and files within the web application. This vulnerability has the potential to provide additional data, enabling further exploitation of resources at later times. |
+| Images |  |
+| Affected Hosts | 192.168.13.45/networking.php |
+| Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
