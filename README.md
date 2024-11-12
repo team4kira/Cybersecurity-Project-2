@@ -86,6 +86,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.45/networking.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
+| Vulnerability 7 | Findings |
+| --- | --- |
+| Title  | PHP Injection |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | Critical |
+| Description | The following PHP injection was employed by LOM to retrieve credential details from the host 192.168.14.35: 'php?message=passthru(whoami)'. The result returned was www-data is the user account. This indicated that the site was vulnerable to various types of PHP code injection, as parameters like the eval() function were not restricted. If left unaddressed, this vulnerability could result in further exploitation. |
+| Images |  |
+| Affected Hosts | 192.168.13.35 |
+| Remediation | • Data Sanitization. (Stone, Verizon) <br> • Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) <br> • Disable Eval to prohibit arbitrary code from being executed. (Moradov, Bright) <br> • Keep PHP updated with the latest security patches. <br> • Utilize a Web Application Firewall to filter HTTP requests that may have suspicious patterns. |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
