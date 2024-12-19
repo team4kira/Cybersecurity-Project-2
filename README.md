@@ -42,7 +42,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Medium |
 | Description | In LOM’s assessment of the ‘comments.php’ pages, it was found that a XSS stored injection could be created. The lack of data sanitization and input validation in the web applications allowed LOM to send malicious XSS stored code onto this web page. Upon refreshment, the code was still within the page source, leaving a vulnerability that can affect any future visitors to the site. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V2.jpg) |
 | Affected Hosts | 192.168.14.35/comments.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
@@ -52,7 +52,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | High |
 | Description | A basic PHP script file was uploaded by LOM. This revealed that the web page was configured to accept various file types, not just image files. Some security measures were in place, as it looked for image keywords like the file type ‘.jpg.’ However, if you added just ‘.jpg’ within the file description, it allowed a malicious payload to be uploaded, in this case, a .php file. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V3.jpg) |
 | Affected Hosts | 192.168.13.45/Memory-Planner.php |
 | Remediation | •	Remove file inclusion input if possible <br> •	Create a whitelist of files that may be included on the web page. (OWASP, WSTG – v4.1) |
 
@@ -62,7 +62,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Critical |
 | Description | In the evaluation of the Login.php webpage, it was found that SQL injection attacks were permissible. The following injection was utilized: ‘ or 1=1#. This resulted in the retrieval of flags and additional data that could be utilized for further exploitations. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V4.jpg) |
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Utilization of Prepared Statements. (OWASP, SQL Injection Prevention Cheat Sheet) |
 
@@ -72,7 +72,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Critical |
 | Description | The host 192.168.13.45/Login.php contains a hidden username and password that can be identified by inspecting the web page's source code or by selecting the field after 'Login' and 'Password.' The password itself is also not secure, as both the username and password relate to the film Total Recall, making it easily guessable, even if not plainly visible. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V5.jpg) |
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset compromised passwords and make sure it is not affiliated with the username. <br> |
 
