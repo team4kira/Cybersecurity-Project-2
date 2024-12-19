@@ -106,6 +106,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset compromised passwords. |
 
+| Vulnerability 9 | Findings |
+| --- | --- |
+| Title  | Directory Traversal |
+| Type (Web app / Linux OS / Windows OS)  | Web Application |
+| Risk Rating | Medium |
+| Description | Using prior vulnerabilities discovered in the old_disclaimer directory of the Web Application, LOM successfully employed a path traversal technique on the disclaimer.php page. The following directory traversal command was inputted to show the data from the file: '192.168.13.35/disclaimer.php?page=old_disclaimers/disclaimer_1.txt'. This allowed for the identification of disclaimer text files containing valuable information and flags. |
+| Images |  |
+| Affected Hosts | 192.168.13.35/disclaimer.php |
+| Remediation | •	Adjust file privileges to ensure only authorized users are able to see files and directories. <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
