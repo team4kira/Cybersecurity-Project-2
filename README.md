@@ -32,7 +32,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Medium |
 | Description | In LOM’s assessment, the ‘Welcome.php’ and the ‘Memory-Planner.php’ pages were evaluated. Utilizing an XSS reflected injection, flags within the web applications were uncovered. The lack of data sanitization and input validation in the web applications allowed LOM to send a malicious XSS reflected code on these two web pages |
-| Images | ![Local Image](Screenshots/V1.png) |
+| Images | ![Local Image](Screenshots/V1.jpg) |
 | Affected Hosts | 192.168.14.35/Memory-Planner.php & 192.168.14.35/Welcome.php |
 | Remediation | •	Encrypt Sensitive Information. (T1659) •	Restrict Web-Based Content. (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
