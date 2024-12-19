@@ -82,7 +82,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Medium |
 | Description | In the evaluation of the networking.php page, command injection vulnerabilities were discovered, allowing access to various directories and files within the web application. This vulnerability has the potential to provide additional data, enabling further exploitation of resources at later times. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V6.jpg) |
 | Affected Hosts | 192.168.13.45/networking.php |
 | Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
@@ -92,7 +92,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Critical |
 | Description | The following PHP injection was employed by LOM to retrieve credential details from the host 192.168.14.35: 'php?message=passthru(whoami)'. The result returned was www-data is the user account. This indicated that the site was vulnerable to various types of PHP code injection, as parameters like the eval() function were not restricted. If left unaddressed, this vulnerability could result in further exploitation. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V7.jpg) |
 | Affected Hosts | 192.168.13.35 |
 | Remediation | • Data Sanitization. (Stone, Verizon) <br> • Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) <br> • Disable Eval to prohibit arbitrary code from being executed. (Moradov, Bright) <br> • Keep PHP updated with the latest security patches. <br> • Utilize a Web Application Firewall to filter HTTP requests that may have suspicious patterns. |
 
@@ -102,7 +102,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Medium |
 | Description | By utilizing Burp Suite and the Firefox addon Foxy Proxy, LOM identified the username and password to the host 192.168.13.45. This enabled further identification of usernames and passwords that could potentially be exploited on the web application. This shows that the site does not have adequate password policies, as evidenced by the numerous failed attempts that were permitted during execution. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V8.jpg) |
 | Affected Hosts | 192.168.13.45/Login.php |
 | Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset compromised passwords. |
 
@@ -112,7 +112,7 @@ By: Kevin D
 | Type (Web app / Linux OS / Windows OS)  | Web Application |
 | Risk Rating | Medium |
 | Description | Using prior vulnerabilities discovered in the old_disclaimer directory of the Web Application, LOM successfully employed a path traversal technique on the disclaimer.php page. The following directory traversal command was inputted to show the data from the file: '192.168.13.35/disclaimer.php?page=old_disclaimers/disclaimer_1.txt'. This allowed for the identification of disclaimer text files containing valuable information and flags. |
-| Images |  |
+| Images | ![Local Image](Screenshots/V9.jpg) |
 | Affected Hosts | 192.168.13.35/disclaimer.php |
 | Remediation | •	Adjust file privileges to ensure only authorized users are able to see files and directories. <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
