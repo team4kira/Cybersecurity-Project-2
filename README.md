@@ -84,7 +84,7 @@ By: Kevin D
 | Description | In the evaluation of the networking.php page, command injection vulnerabilities were discovered, allowing access to various directories and files within the web application. This vulnerability has the potential to provide additional data, enabling further exploitation of resources at later times. |
 | Images | ![Local Image](Screenshots/V6.jpg) |
 | Affected Hosts | 192.168.13.45/networking.php |
-| Remediation | •	Encrypt Sensitive Information (T1659) <br> •	Restrict Web-Based Content (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
+| Remediation | •	Encrypt Sensitive Information. (T1659) <br> •	Restrict Web-Based Content. (T1659) <br> •	Input Validation. (Stone, Verizon) <br> •	Data Sanitization. (Stone, Verizon) <br> •	Utilize Web Application Firewall rules to block abnormal requests. (Stone, Verizon) |
 
 | Vulnerability 7 | Findings |
 | --- | --- |
