@@ -126,6 +126,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.10:80 |
 | Remediation | •	Update Apache Tomcat. <br> •	Remove the ROOT Folder if possible as the vulnerability is limited to the ROOT web application of Apache Tomcat. (Nist, CVE-2023-41080) |
 
+| Vulnerability 11 | Findings |
+| --- | --- |
+| Title  | Shellshock |
+| Type (Web app / Linux OS / Windows OS)  | Linux OS |
+| Risk Rating | Critical |
+| Description | The Metasploit module exploit/multi/http/apache_mod_cgi_bash_env_exec was executed by LOM. The following options were configured: remote host: 192.168.13.11. This Shellshock vulnerability exploits a flaw in the Bash shell by targeting CGI scripts in the Apache web server, manipulating the HTTP_USER_AGENT to enable malicious activities (Rapid7, Apache mod_cgi). This exploit granted root access, allowing for the reconfiguration of etc/sudoers, which in turn could be used to modify privileges on the Linux OS. |
+| Images | ![Local Image](Screenshots/V11.jpg) |
+| Affected Hosts | 192.168.13.11 |
+| Remediation | •	Update to the latest version of BASH. <br> •	Create a mod_security_rule that would reject HTTP request containing data that may be interpreted by Bash. (RedHat, Mitgating the Shellshock) <br> •	Use IPTable rules to drop unwanted packets. (RedHat, Mitgating the Shellshock) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
