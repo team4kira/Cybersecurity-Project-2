@@ -136,6 +136,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.11 |
 | Remediation | •	Update to the latest version of BASH. <br> •	Create a mod_security_rule that would reject HTTP request containing data that may be interpreted by Bash. (RedHat, Mitgating the Shellshock) <br> •	Use IPTable rules to drop unwanted packets. (RedHat, Mitgating the Shellshock) |
 
+| Vulnerability 12 | Findings |
+| --- | --- |
+| Title  | Struts |
+| Type (Web app / Linux OS / Windows OS)  | Linux OS |
+| Risk Rating | High |
+| Description | Utilizing Nessus for reconnaissance, LOM identified a Struts exploitation in the host 192.168.13.12. With this knowledge, the metasploit module multi/http/struts2_content_type_ognl was deployed on the aforementioned host. This module exploits a remote code execution vulnerability in Apache versions 2.3.5 – 2.3.31 and 2.5 – 2.5.10 (Rapid7, Apache Struts). This enabled LOM to establish a meterpreter session and gain access to the root directory of the Linux OS. |
+| Images | ![Local Image](Screenshots/V12.jpg) |
+| Affected Hosts | 192.168.13.12 |
+| Remediation | •	Update Apache Struts. <br> •	Utilize a Web Application Firewall (WAF) on the backend application server. (Crosser, Praetorian) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
