@@ -146,6 +146,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.12 |
 | Remediation | •	Update Apache Struts. <br> •	Utilize a Web Application Firewall (WAF) on the backend application server. (Crosser, Praetorian) |
 
+| Vulnerability 13 | Findings |
+| --- | --- |
+| Title  | Drupal  |
+| Type (Web app / Linux OS / Windows OS)  | Linux OS |
+| Risk Rating | High |
+| Description | After identifying a Drupal vulnerability on host 192.168.13.13, LOM utilized the Metasploit module exploit unix/webapp/drupal_restws_unserialize to establish a meterpreter session. This was accomplished by specifying the aforementioned host and executing the module. Subsequently, LOM identified www-data as the UID of the host, which proved to be valuable post-reconnaissance information. |
+| Images | ![Local Image](Screenshots/V13.jpg) |
+| Affected Hosts | 192.168.13.13 |
+| Remediation | •	Update Drupal to the latest version. <br> •	If possible, disable POST, PATCH and PUT. (Rapid7, Drupal RESTful) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
