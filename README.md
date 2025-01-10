@@ -156,6 +156,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.13 |
 | Remediation | •	Update Drupal to the latest version. <br> •	If possible, disable POST, PATCH and PUT. (Rapid7, Drupal RESTful) |
 
+| Vulnerability 14 | Findings |
+| --- | --- |
+| Title  | Password Guessing |
+| Type (Web app / Linux OS / Windows OS)  | Linux OS |
+| Risk Rating | Critical |
+| Description | Utilizing OSINT's domain dossier for reconnaissance, LOM identified an SSH Username of Alice. Subsequently, LOM initiated password guessing, and it was discovered that the admin in question used her name, ‘alice’, as the password. This made it easy to access the host 192.168.13.14. |
+| Images | ![Local Image](Screenshots/V14.jpg) |
+| Affected Hosts | 192.168.13.14 |
+| Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset password to something longer and more secure. <br> •	Consider password encryptions. |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
