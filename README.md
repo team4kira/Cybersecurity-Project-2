@@ -166,6 +166,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.14 |
 | Remediation | •	Account Lockout policy should be created to lock individuals out after a certain number of failed login attempts. (T1110.003) <br> •	Enable the use of multi-factor authentication. (T1110.003) <br> •	Use administrative controls to train staff on Password Policies. Use NIST as a password policy guide. (T1110.003) <br> •	Reset password to something longer and more secure. <br> •	Consider password encryptions. |
 
+| Vulnerability 15 | Findings |
+| --- | --- |
+| Title  | Sudo Command Privileges Vulnerability |
+| Type (Web app / Linux OS / Windows OS)  | Linux OS |
+| Risk Rating | Critical |
+| Description | Once access to the Linux OS was gained, LOM utilized a sudo privilege exploitation. This was achieved using the following command: 'sudo -u#-1'. This exploitation works due to a Runas ALL sudoer vulnerability, which can bypass policy blacklists, allowing sudo with crafted user IDs (Nist, CVE-2019-14287). This vulnerability provides full access to the affected host, including all of its files and directories. |
+| Images | ![Local Image](Screenshots/V15.jpg) |
+| Affected Hosts | 192.168.13.14 |
+| Remediation | •	Ensure you have a sudo version that is NOT prior to 1.8.28. <br> •	Examine all sudoers that include ‘!’ character and ensure that root user is not among the exclusions. (Rhett, VulCan) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
