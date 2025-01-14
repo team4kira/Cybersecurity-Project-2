@@ -176,6 +176,16 @@ By: Kevin D
 | Affected Hosts | 192.168.13.14 |
 | Remediation | •	Ensure you have a sudo version that is NOT prior to 1.8.28. <br> •	Examine all sudoers that include ‘!’ character and ensure that root user is not among the exclusions. (Rhett, VulCan) |
 
+| Vulnerability 16 | Findings |
+| --- | --- |
+| Title  | FTP Anonymous Vulnerability |
+| Type (Web app / Linux OS / Windows OS)  | Windows OS |
+| Risk Rating | High |
+| Description | After performing a nmap scan: 'nmap -A 172.22.117.20', it was revealed that port 21/FTP was open on the Windows 10 Machine. From there, LOM exploited the anonymous FTP vulnerability by logging into FTP using an anonymous username. Anonymous FTP allows users to access FTP servers without providing a user ID (Awati, TechTarget). This leaves the aforementioned host vulnerable to further exploitation and post-reconnaissance attacks. |
+| Images | ![Local Image](Screenshots/V16.jpg) |
+| Affected Hosts | 172.22.117.20:21 |
+| Remediation | •	Disable FTP on affected host. <br> •	If FTP cannot be disabled limit the anonymous user to downloading only, to prohibit malicious file uploads. (BU TechWeb) <br> •	Create a Cron job that monitors the FTP server. (BU TechWeb) |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
