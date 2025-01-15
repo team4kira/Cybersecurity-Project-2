@@ -186,6 +186,16 @@ By: Kevin D
 | Affected Hosts | 172.22.117.20:21 |
 | Remediation | •	Disable FTP on affected host. <br> •	If FTP cannot be disabled limit the anonymous user to downloading only, to prohibit malicious file uploads. (BU TechWeb) <br> •	Create a Cron job that monitors the FTP server. (BU TechWeb) |
 
+| Vulnerability 17 | Findings |
+| --- | --- |
+| Title  | SLMail Vulnerability |
+| Type (Web app / Linux OS / Windows OS)  | Windows OS |
+| Risk Rating | Critical |
+| Description | The previous nmap scan also revealed the SLMail service being open via POP3 protocol on port 110. With this data, LOM employed the Metasploit module windows/pop3/seattlelab_pass by specifying 172.22.117.20 as the Remote Host. This module operates by sending an excessively long password to trigger an unauthenticated buffer overflow in the POP3 server (Rapid7, Seattle Lab). This leads to a successful exploitation without crashing the service or server (ibid), resulting in a successful meterpreter session that provides access to the Windows Machine. |
+| Images | ![Local Image](Screenshots/V17.jpg) |
+| Affected Hosts | 172.22.117.20:110 |
+| Remediation | •	Disable SLMail service if possible. <br> •	Update to the latest version of SLMail. |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
