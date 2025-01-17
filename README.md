@@ -196,6 +196,16 @@ By: Kevin D
 | Affected Hosts | 172.22.117.20:110 |
 | Remediation | •	Disable SLMail service if possible. <br> •	Update to the latest version of SLMail. |
 
+| Vulnerability 18 | Findings |
+| --- | --- |
+| Title  | LSADUMP Attack |
+| Type (Web app / Linux OS / Windows OS)  | Windows OS |
+| Risk Rating | High |
+| Description | The exploitation of LSADUMP enabled LOM to execute a credential dumping attack. After creating a meterpreter session via the window/pop3/seattlelab_pass Metasploit module (as detailed in the previous vulnerability), the tool Mimikatz was deployed. The following Mimikatz command was utilized: 'kiwi_cmd lsadump::cache'. This command facilitates the extraction of cached credentials from the Local Security Authority (LSA) (Hacker Too, cache), accomplished through enumeration from the Windows Registry (ibid). This allowed LOM to capture flags and user credentials. |
+| Images | ![Local Image](Screenshots/V18.jpg) |
+| Affected Hosts | 172.22.117.20 |
+| Remediation | •	Enable LSA Protection on Windows (Einoryte, NordVPN) <br> •	Use anti-malware software as it can detect malware attacks including Minikatz. (Einoryte, NordVPN). |
+
 Work Citation: 
 
 Awati, R. Anonymous FTP (File Transfer Protocol). Tech Target. https://www.techtarget.com/whatis/definition/anonymous-FTP-File-Transfer-Protocol 
